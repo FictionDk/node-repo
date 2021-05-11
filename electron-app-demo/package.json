@@ -1,0 +1,12 @@
+{
+  "name": "electron-app-demo",
+  "version": "1.0.0",
+  "main": "main.js",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^12.0.7"
+  },
+  "scripts": {
+    "start": "electron ."
+  }
+}
