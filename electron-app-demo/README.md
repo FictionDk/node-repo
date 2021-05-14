@@ -23,3 +23,15 @@
 3. 启动项目,`yarn start`,包裹`index.html`的主窗口启动
 
 > 参考: https://www.electronjs.org/docs/tutorial/quick-start
+
+## 打包
+
+### Electron Forge
+
+1. 局部安装Forge: `npx cross-env ELECTRON_GET_USE_PROXY=true GLOBAL_AGENT_HTTPS_PROXY=http://127.0.0.1:1080 yarn add @electron-forge/cli --dev`, 重写`package.json`.`devDependencies`相关内容
+2. 导入Forge: `npx electron-forge import`, 重写`package.json`.`config`/`scripts`相关内容
+3. 编译项目: `make make`,执行时抛出异常`Authors is required.Description is required.`异常,需要在`package.json`中添加`"author"和"description"`
+
+> 参考:  
+> https://github.com/electron-userland/electron-forge/issues/1662  
+> https://www.electronforge.io/configuration  
